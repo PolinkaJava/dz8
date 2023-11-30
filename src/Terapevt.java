@@ -8,7 +8,8 @@ public class Terapevt extends Doctor {
         switch (patient.getRecoveryPlan()) {
             case 1 -> patient.setDoctor(new Xiryrg());
             case 2 -> patient.setDoctor(new Dentist());
-            default -> patient.setDoctor(new Terapevt());
+            case 3 -> patient.setDoctor(new Terapevt());
+            default -> patient.setDoctor(this);
     }
         patient.getDoctor().lechenie();
 }}
